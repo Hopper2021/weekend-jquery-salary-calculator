@@ -8,43 +8,45 @@
     <script src="jquery.js"></script>
     <script src="client.js"></script>
     <title>Document</title>
+    <header>Salary Calculator</header>
 </head>
 <body>
-    <h1 id="salary-calculator">Salary Calculator</h1>
-    <h2 id="add-employee">Add Employee</h2>
+    <h3 id="add-employee">Add Employee</h3>
     <div id="employee-input-container">
         <input type="text" id="first-name" placeholder="First Name">
         <input type="text" id="last-name" placeholder="Last Name">
         <input type="number" id="number" placeholder="ID">
         <input type="text" id="title" placeholder="Title">
         <input type="text" id="annual-salary" placeholder="Annual Salary"><br />
-            <button type="submit">Submit</button>
+            <button type="submit" id="submit-button">Submit</button>
     </div>
-    <h2 id="employees">Employees</h2>
-    <table>
-        <thead>
-            <tr>
-                <th id="first-name-table-header">First Name</th>
-                <th id="last-name-table-header">Last Name</th>
-                <th id="id-table-header">ID</th>
-                <th id="title-table-header">Title</th>
-                <th id="annual-salary-table-header">Annual Salary</th>
-                <th id="delete-table-header"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr id="employee-table-row">
-                <td class="first-name-table-body"></td>
-                <td class="last-name-table-body"></td>
-                <td class="id-table-body"></td>
-                <td class="title-table-body"></td>
-                <td class="annual-salary-table-body"></td>
-                <td class="delete-table-body"></td>
-            </tr>
-            <tr> 
-            </tr>
-        </tbody>
-    </table>
-    <h2 id="total-monthly">Total Monthly: $<span></span></h2>
+    <h3 id="employees">Employees</h3>
+    <div class="table-container">
+        <table class="employee-table">
+            <thead>
+                <tr>
+                    <th id="first-name-table-header">First Name</th>
+                    <th id="last-name-table-header">Last Name</th>
+                    <th id="id-table-header">ID</th>
+                    <th id="title-table-header">Title</th>
+                    <th id="annual-salary-table-header">Annual Salary</th>
+                    <th id="delete-table-header"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="employee-table-row">
+                    <td class="first-name-table-body"></td>
+                    <td class="last-name-table-body"></td>
+                    <td class="id-table-body"></td>
+                    <td class="title-table-body"></td>
+                    <td class="annual-salary-table-body"></td>
+                    <td class="delete-table-body"></td>
+                </tr>
+                <tr> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h3 id="total-monthly">Total Monthly: $<span></span></h3>
 </body>
 </html>

@@ -12,12 +12,13 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] Link jq, js and syle.css and make and link readyNow
 - [x] Build headers, inputs and table in html
 - [x] Add buttons for submitting and deleting
-- [ ] Style the table
+- [x] Style the table
 - [ ] Define global variables for employeeName, ID, etc. and monthly cost
 - [ ] create function that collects data from inputs
 - [ ] append to the DOM collection from inputs
 - [ ] append monthly cost with empty then append.
 - [ ] Logic for background color on the monthly cost
+- [ ] Fix submit button styling
 
 ### Stretch
 
