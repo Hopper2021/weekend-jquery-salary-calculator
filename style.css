@@ -1,0 +1,47 @@
+body{
+    margin: 0;
+}
+h1 {
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: grey;
+}
+
+table, td, th {  
+    border: 1px solid black;
+    text-align: left;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px;
+  }
+  
+th, td {
+    padding: 15px;
+  }
+
+th {
+    background-color: grey;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+h2 {
+    margin: 20px;
+}
+
+div {
+    margin: 20px;
+}
+
+#total-monthly {
+    text-align: right;
+}
+button {
+    margin 20px;
+}
