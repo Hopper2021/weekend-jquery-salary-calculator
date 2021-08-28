@@ -10,6 +10,39 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1 id="salary-calculator">Salary Calculator</h1>
+    <h2 id="add-employee">Add Employee</h2>
+    <div id="employee-input-container">
+        <input type="text" id="first-name" placeholder="First Name">
+        <input type="text" id="last-name" placeholder="Last Name">
+        <input type="number" id="number" placeholder="ID">
+        <input type="text" id="title" placeholder="Title">
+        <input type="text" id="annual-salary" placeholder="Annual Salary"><br />
+            <button type="submit">Submit</button>
+    </div>
+    <h2 id="employees">Employees</h2>
+    <table>
+        <thead>
+            <tr>
+                <th id="first-name-table-header">First Name</th>
+                <th id="last-name-table-header">Last Name</th>
+                <th id="id-table-header">ID</th>
+                <th id="title-table-header">Title</th>
+                <th id="annual-salary-table-header">Annual Salary</th>
+                <th id="delete-table-header"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-name-table-body"></td>
+                <td class="last-name-table-body"></td>
+                <td class="id-table-body"></td>
+                <td class="title-table-body"></td>
+                <td class="annual-salary-table-body"></td>
+                <td class="delete-table-body"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="total-monthly">Total Monthly: $<span></span></h2>
 </body>
 </html>

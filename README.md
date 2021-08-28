@@ -10,7 +10,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 - [x] Create HTML, client.js, jquery
 - [x] Link jq, js and syle.css and make and link readyNow
-- [ ] Build headers, inputs and table in html
+- [x] Build headers, inputs and table in html
 - [ ] Add buttons for submitting and deleting
 - [ ] Style the table
 - [ ] Define global variables for employeeName, ID, etc. and monthly cost
