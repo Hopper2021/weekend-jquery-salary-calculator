@@ -4,7 +4,8 @@ $(document).ready(readyNow);
 
 function readyNow (){
     console.log('JQ Ready');
-    $('#submit-button').on('click', submitToTable)
+    $('#submit-button').on('click', submitToTable);
+    $('#employee-table-body').on('click', '.delete-button', deleteFromTable);
 }
 
 let monthlyTotal = 0;
@@ -23,7 +24,7 @@ function submitToTable () {
     let annualSalary = $('#annual-salary-input');
 
     $('#employee-table-body').append(`
-        <tr>
+        <tr class="employee-table-row">
             <td class="first-name-table-body">${firstName.val()}</td>
             <td class="last-name-table-body">${lastName.val()}</td>
             <td class="id-table-body">${id.val()}</td>
@@ -41,6 +42,7 @@ function submitToTable () {
     $('#total-monthly-span').append((monthlyTotal));
 
     clearInputs();
+    // addToMonthlyTotal();
 }
 
 function clearInputs () {
@@ -55,15 +57,30 @@ function clearInputs () {
 // addToMonthlyTotal function, it is read as
 // 0. I think it is not being passed correctly.
 // When defined globally it is also unable to be read.
-// 
 
 // function addToMonthlyTotal () {
 //     console.log('in addToMonthlyTotal');
 //     let employeeSalary = $('#annual-salary-input');
-
-//     monthlyTotal += employeeSalary.val();
+//     monthlyTotal += parseInt(employeeSalary);
 //     console.log(monthlyTotal);
-    
 //     $('#total-monthly-span').empty();
 //     $('#total-monthly-span').append(parseInt(monthlyTotal));
 // }
+
+function deleteFromTable () {
+    console.log('in deleteFromTable');
+    console.log($(this).parent());
+    
+    console.log($(this).parent().parent()); // This is employee-table-row, filter this to annual-salary-table-body
+    
+    let salaryToSubtract = parseInt($(this).parent().parent('.annual-salary-table-body'));
+    monthlyTotal -= salaryToSubtract;
+    // console.log(monthlyTotal);
+    
+    $('#total-monthly-span').empty();
+    console.log(monthlyTotal);
+    
+    $('#total-monthly-span').append(monthlyTotal);
+
+    $(this).parent().parent().empty();
+}
