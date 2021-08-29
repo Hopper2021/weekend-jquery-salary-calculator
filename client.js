@@ -23,19 +23,18 @@ function submitToTable () {
     let title = $('#title-input');
     let annualSalary = $('#annual-salary-input');
 
-    $('#employee-table-body').append(`
+    $('#employee-table-body').prepend(`
         <tr class="employee-table-row">
             <td class="first-name-table-body">${firstName.val()}</td>
             <td class="last-name-table-body">${lastName.val()}</td>
             <td class="id-table-body">${id.val()}</td>
             <td class="title-table-body">${title.val()}</td>
-            <td class="annual-salary-table-body">${annualSalary.val()}</td>
+            <td class="annual-salary-table-body">$${annualSalary.val()}</td>
             <td class="delete-table-body"><button class="delete-button">Delete</button></td>
         </tr>
     `);
 
     monthlyTotal += parseInt(annualSalary.val());
-    console.log(monthlyTotal);
     // Cannot read commas when concatenated, how would I fix this?
     $('#total-monthly-span').empty();
     $('#total-monthly-span').append((monthlyTotal));
@@ -71,18 +70,9 @@ function clearInputs () {
 // }
 
 function deleteFromTable () {
-    console.log('in deleteFromTable');
-    console.log($(this).parent());
-    
-    console.log($(this).parent().parent());
-    
-    let salaryToSubtract = parseInt($(this).parent().parent().data('.annual-salary-table-body'));
+    let salaryToSubtract = parseInt($(this).parent().parent('.annual-salary-table-body').text()); // comes out as NaN, I need to use .data here but not sure how
     monthlyTotal -= salaryToSubtract;
-    console.log(monthlyTotal); // comes out as NaN
-    
     $('#total-monthly-span').empty();
-    console.log(monthlyTotal);
     $('#total-monthly-span').append(monthlyTotal);
-
     $(this).parent().parent().empty();
 }

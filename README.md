@@ -17,12 +17,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] create function that collects data from inputs
 - [x] append to the DOM collection from inputs
 - [x] append monthly cost with empty then append.
-- [ ] Logic for background color on the monthly cost
-- [ ] Fix submit button styling
+- [x] Logic for background color on the monthly cost
 
 ### Stretch
 
 - [ ] Arrays and objects to hold information?
-- [ ] Color change
 - [ ] Update total on delete
 - [ ] Alert of the missing fields
