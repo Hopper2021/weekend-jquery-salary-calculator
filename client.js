@@ -37,10 +37,13 @@ function submitToTable () {
     monthlyTotal += parseInt(annualSalary.val());
     console.log(monthlyTotal);
     // Cannot read commas when concatenated, how would I fix this?
-
     $('#total-monthly-span').empty();
     $('#total-monthly-span').append((monthlyTotal));
-
+    if( monthlyTotal > 20000 ){
+        $('#total-monthly').css('background-color', 'red');
+    } else {
+        // Do nothing
+    }
     clearInputs();
     // addToMonthlyTotal();
 }
@@ -71,15 +74,14 @@ function deleteFromTable () {
     console.log('in deleteFromTable');
     console.log($(this).parent());
     
-    console.log($(this).parent().parent()); // This is employee-table-row, filter this to annual-salary-table-body
+    console.log($(this).parent().parent());
     
-    let salaryToSubtract = parseInt($(this).parent().parent('.annual-salary-table-body'));
+    let salaryToSubtract = parseInt($(this).parent().parent().data('.annual-salary-table-body'));
     monthlyTotal -= salaryToSubtract;
-    // console.log(monthlyTotal);
+    console.log(monthlyTotal); // comes out as NaN
     
     $('#total-monthly-span').empty();
     console.log(monthlyTotal);
-    
     $('#total-monthly-span').append(monthlyTotal);
 
     $(this).parent().parent().empty();
