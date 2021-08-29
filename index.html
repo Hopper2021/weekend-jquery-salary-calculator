@@ -13,11 +13,11 @@
 <body>
     <h3 id="add-employee">Add Employee</h3>
     <div id="employee-input-container">
-        <input type="text" id="first-name" placeholder="First Name">
-        <input type="text" id="last-name" placeholder="Last Name">
-        <input type="number" id="number" placeholder="ID">
-        <input type="text" id="title" placeholder="Title">
-        <input type="text" id="annual-salary" placeholder="Annual Salary"><br />
+        <input type="text" id="first-name-input" placeholder="First Name">
+        <input type="text" id="last-name-input" placeholder="Last Name">
+        <input type="number" id="id-input" placeholder="ID">
+        <input type="text" id="title-input" placeholder="Title">
+        <input type="text" id="annual-salary-input" placeholder="Annual Salary"><br />
             <button type="submit" id="submit-button">Submit</button>
     </div>
     <h3 id="employees">Employees</h3>
@@ -33,8 +33,8 @@
                     <th id="delete-table-header"></th>
                 </tr>
             </thead>
-            <tbody>
-                <tr id="employee-table-row">
+            <tbody id="employee-table-body">
+                <tr>
                     <td class="first-name-table-body"></td>
                     <td class="last-name-table-body"></td>
                     <td class="id-table-body"></td>

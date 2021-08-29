@@ -14,8 +14,8 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] Add buttons for submitting and deleting
 - [x] Style the table
 - [ ] Define global variables for employeeName, ID, etc. and monthly cost
-- [ ] create function that collects data from inputs
-- [ ] append to the DOM collection from inputs
+- [x] create function that collects data from inputs
+- [x] append to the DOM collection from inputs
 - [ ] append monthly cost with empty then append.
 - [ ] Logic for background color on the monthly cost
 - [ ] Fix submit button styling
