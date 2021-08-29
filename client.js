@@ -1,4 +1,5 @@
 console.log('JS Ready');
+let monthlyTotal = 0;
 
 $(document).ready(readyNow);
 
@@ -29,6 +30,7 @@ function submitToTable () {
         </tr>
     `);
     clearInputs();
+    addToMonthlyTotal();
 }
 
 function clearInputs () {
@@ -37,4 +39,15 @@ function clearInputs () {
     $('#id-input').val('');
     $('#title-input').val('');
     $('#annual-salary-input').val('');
+}
+
+function addToMonthlyTotal () {
+    console.log('in addToMonthlyTotal');
+    let employeeSalary = $('#annual-salary-input').val();
+
+    monthlyTotal += employeeSalary;
+    console.log(monthlyTotal);
+    
+    $('#total-monthly-span').empty();
+    $('#total-monthly-span').append(parseInt(monthlyTotal));
 }
